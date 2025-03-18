@@ -8,7 +8,8 @@ import {v2 as cloudinary} from "cloudinary"
 import authRoutes from './routes/auth.routes.js';
 import userRoutes from './routes/user.routes.js';
 import postRoutes from './routes/post.routes.js';
-
+import notificationRoutes from './routes/notification.routes.js';
+ 
 
 // Load env vars    
 dotenv.config();
@@ -29,6 +30,7 @@ app.use(cors());
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/posts', postRoutes);
+app.use('/api/notifications', notificationRoutes);
 
 app.get('/', (req, res) => {
   res.send('API is running...');
